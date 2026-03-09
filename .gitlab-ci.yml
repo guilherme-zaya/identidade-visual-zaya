@@ -1,9 +1,8 @@
 create-pages:
   stage: deploy
   script:
-    - npx @11ty/eleventy --input=path/to/eleventy/root --output=public
-  pages:
-    publish: public
+    - mv my-html-content public
+  pages: true
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   environment: production
