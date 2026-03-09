@@ -1,7 +1,7 @@
 create-pages:
   stage: deploy
   script:
-    - mv my-html-content public
+    - mv index.html public
   pages: true
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
