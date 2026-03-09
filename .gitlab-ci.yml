@@ -1,9 +1,9 @@
-deploy-pages:
+create-pages:
   stage: deploy
   script:
-    - mkdir -p public
-    - test -f public/index.html || echo '<!doctype html><html><body>Zaya assets online</body></html>' > public/index.html
+    - npx @11ty/eleventy --input=path/to/eleventy/root --output=public
   pages:
     publish: public
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  environment: production
