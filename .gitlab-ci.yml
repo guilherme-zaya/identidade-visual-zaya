@@ -1,8 +1,0 @@
-create-pages:
-  stage: deploy
-  script:
-    - echo "nothing to do here"
-  pages: true
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-  environment: production
